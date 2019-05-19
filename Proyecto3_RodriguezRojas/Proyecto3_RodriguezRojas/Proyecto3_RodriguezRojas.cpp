@@ -7,41 +7,39 @@
 #include <iostream>
 #include <istream>
 
-
 void createScene()
 {
 	using namespace Imager;
 
 	Scene scene(Color(0.0, 0.0, 0.0));
 
-	//rintf("read image \n");
+	// Dimensions of the chess board.
 
-		//unsigned char* bg = readBMP("backGround.bmp");
+	const double innerSize = 50.00;
+	const double xBorderSize = 1.00;
+	const double yBorderSize = 1.00;
+	const double thickness = 0.25;
 
-		/*const double innerSize = 10.00;
-		const double xBorderSize = 1.00;
-		const double yBorderSize = 1.00;
-		const double thickness = 0.20;
+	const Color lightSquareColor = Color(0.76, 0.60, 0.42);
+	const Color darkSquareColor = Color(0.76, 0.60, 0.42);
+	const Color borderColor = Color(0.76, 0.60, 0.42);
 
-		const Color lightSquareColor = Color(0.40, 0.30, 0.5);
-		const Color darkSquareColor = Color(0.40, 0.30, 0.5);
-		const Color borderColor = Color(0.40, 0.30, 0.5);
+	// Create the chess board and add it to the scene.
 
-		// Create the chess board and add it to the scene.
+	ChessBoard* board = new ChessBoard(
+		innerSize,
+		xBorderSize,
+		yBorderSize,
+		thickness,
+		lightSquareColor,
+		darkSquareColor,
+		borderColor);
 
-		ChessBoard* board = new ChessBoard(
-			innerSize,
-			xBorderSize,
-			yBorderSize,
-			thickness,
-			lightSquareColor,
-			darkSquareColor,
-			borderColor);
+	board->Move(0.0, 0.0, -80.0);
 
-		board->Move(0.0, 0.0, -20.0);
+	scene.AddSolidObject(board);
 
-		//board->RotateZ(+11.0);
-		//board->RotateX(-62.0);
+	//CUBOIDS
 
 		scene.AddSolidObject(board);
 
@@ -153,7 +151,7 @@ void createScene()
 	cylinder3->RotateY(-180.0);
 
 	scene.AddSolidObject(cylinder3);
-	/*
+	
 	Cylinder* cylinder4 = new Cylinder(0.5, 1.9);
 	cylinder4->SetFullMatte(Color(0.3, 0.8, 0.5));
 	cylinder4->Move(3.0, 4.0, -50.0);
@@ -161,33 +159,35 @@ void createScene()
 	cylinder4->RotateY(-70.0);
 
 
-	scene.AddSolidObject(cylinder4);*/
+	scene.AddSolidObject(cylinder4);
 	scene.AddLightSource(LightSource(Vector(+35.0, +50.0, +20.0), Color(1.0, 1.0, 1.0)));
 
-
+	*/
 	//Polyhedra
 
-	/*Optics optics;  // use default optics (white matte finish, opaque)
+	Optics optics;  // use default optics (white matte finish, opaque)
 
-	Dodecahedron* dodecahedron = new Dodecahedron(Vector(+0.0, -0.3, -50.0), 0.3, optics);
+	Dodecahedron* dodecahedron = new Dodecahedron(Vector(+0.0, -0.3, -30.0), 0.3, optics);
 	dodecahedron->RotateX(-12.0);
 	dodecahedron->RotateY(-7.0);
 
 	scene.AddSolidObject(dodecahedron);
 
-	Icosahedron* icosahedron = new Icosahedron(Vector(-2.0, -1.2, -50.0), 0.3, optics);
+	Icosahedron* icosahedron = new Icosahedron(Vector(-2.0, -1.2, -30.0), 0.3, optics);
 	icosahedron->RotateY(-12.0);
 	icosahedron->RotateX(-7.0);
 
 	scene.AddSolidObject(icosahedron);
-	*/
-	scene.AddLightSource(LightSource(Vector(-45.0, +10.0, +50.0), Color(1.0, 1.0, 0.3, 1.0)));
-	scene.AddLightSource(LightSource(Vector(+5.0, +90.0, -40.0), Color(0.5, 0.5, 1.5, 0.5)));
-	scene.AddLightSource(LightSource(Vector(+45.0, -10.0, +40.0), Color(0.1, 0.5, 0.1, 0.5)));
+	
+	// Add light sources.
 
+	scene.AddLightSource(LightSource(Vector(-100.0, 50.0, 100.0), Color(1.0, 1.0, 1.0, 1.0))); //IZQ
+	scene.AddLightSource(LightSource(Vector(0.0, -20.0, 200.0), Color(1.0, 1.0, 1.0, 1.0))); //CENTRO
+	scene.AddLightSource(LightSource(Vector(100.0, 50.0, 100.0), Color(1.0, 1.0, 1.0, 1.0))); //DER
 
-	const char* filename = "test.png";
-	scene.SaveImage(filename, 600, 360, 4.5, 3);
+	printf("saving image \n");
+	const char *filename = "image.png";
+	scene.SaveImage(filename, 1008, 567, 3.0, 1);
 	std::cout << "Wrote " << filename << std::endl;
 }
 

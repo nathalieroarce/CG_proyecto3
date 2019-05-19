@@ -1,10 +1,12 @@
-#ifndef __DDC_IMAGER_H
-#define __DDC_IMAGER_H
-
 #include <vector>
 #include <cmath>
 #include "algebra.h"
+//#include "glmath.h"
+//#include <FreeImage.h>
+//#pragma comment(lib, "FreeImage.lib")
 
+#ifndef __DDC_IMAGER_H
+#define __DDC_IMAGER_H
 #define RAYTRACE_DEBUG_POINTS 0
 
 namespace Imager
@@ -957,6 +959,23 @@ namespace Imager
         Vector  yDir;
         Vector  zDir;
     };
+	//------------------------------------------------------------------------
+
+	class CTexture
+	{
+	private:
+		int *Data;// tipo real BYTE
+		int Width, Height;
+
+	public:
+		CTexture();
+		~CTexture();
+
+		bool CreateTexture2D(const char *Texture2DFileName);
+		Color GetColorNearest(float s, float t);
+		Color GetColorBilinear(float s, float t);
+		void Destroy();
+	};
 
     //------------------------------------------------------------------------
 

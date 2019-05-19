@@ -15,7 +15,7 @@ namespace Imager
             double _thickness,
             const Color& _lightSquareColor,
             const Color& _darkSquareColor,
-            const Color& _borderColor);
+            const Color& _borderColor); // CTexture &t);
 
     protected:
         // This method override provides the variety of colors
@@ -33,7 +33,7 @@ namespace Imager
         double thickness;
         Color  lightSquareColor;
         Color  darkSquareColor;
-        Color  borderColor;
+        Color  borderColor;// CTexture &t;
     };
 }
 

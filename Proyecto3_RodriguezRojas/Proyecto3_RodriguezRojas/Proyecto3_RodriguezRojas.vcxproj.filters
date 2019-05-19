@@ -18,19 +18,25 @@
     <ClInclude Include="pch.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="algebra.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="chessboard.h">
+    <ClInclude Include="lodepng.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="imager.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="lodepng.h">
+    <ClInclude Include="algebra.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="polyhedra.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="chessboard.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="string.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="glmath.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,27 +47,6 @@
     <ClCompile Include="Proyecto3_RodriguezRojas.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="algebra.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="optics.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="backGround.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="binary.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="chessboard.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="cone.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="cuboid.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="cylinder.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -69,6 +54,18 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="lodepng.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="algebra.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="binary.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="cuboid.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="optics.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="reorient.cpp">
@@ -95,13 +92,29 @@
     <ClCompile Include="sphere.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="backGround.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="chessboard.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="cone.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="dodecahedron.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="texture.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="glmath.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="backGround.bmp">
-      <Filter>Archivos de recursos</Filter>
-    </Image>
-    <Image Include="image.png">
-      <Filter>Archivos de recursos</Filter>
-    </Image>
+    <None Include="FreeImage.dll" />
   </ItemGroup>
 </Project>

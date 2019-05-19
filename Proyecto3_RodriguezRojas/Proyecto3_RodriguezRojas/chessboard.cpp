@@ -11,7 +11,7 @@ namespace Imager
         double _thickness,
         const Color&_lightSquareColor, 
         const Color&_darkSquareColor, 
-        const Color&_borderColor)
+        const Color&_borderColor)//CTexture &_t)
             : Cuboid(
                 _innerSize/2.0 + _xBorderSize,
                 _innerSize/2.0 + _yBorderSize,
@@ -22,7 +22,7 @@ namespace Imager
             , thickness(_thickness)
             , lightSquareColor(_lightSquareColor)
             , darkSquareColor(_darkSquareColor)
-            , borderColor(_borderColor)
+            , borderColor(_borderColor)//t(_t)
     {
     }
 
@@ -60,6 +60,12 @@ namespace Imager
         // use the border color.
         if (surfacePoint.z < thickness/2.0 - EPSILON)
         {
+			/*float s = dot(Data.Quad->T, Data.Point) - Data.Quad->O.x;
+			float tf = dot(Data.Quad->B, Data.Point) - Data.Quad->O.y;
+
+			Color c = t.GetColorBilinear(s, tf);
+			optics.SetMatteColor(c);*/
+
             optics.SetMatteColor(borderColor);
         }
         else
