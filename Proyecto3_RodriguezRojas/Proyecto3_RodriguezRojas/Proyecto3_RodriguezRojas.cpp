@@ -50,47 +50,37 @@ void createScene()
 		scene.AddLightSource(LightSource(Vector(-25.0, +30.0, +40.0), Color(0.3, 0.2, 0.1, 1.0)));
 		*/
 
-		//CUBOIDS
 
-	Cuboid *cuboid = new Cuboid(0.5, 0.5, 0.9);
+	//CONES
+
+	Cone* conoIzquierdo = new Cone(1.0, 1.5);
+	conoIzquierdo->SetFullMatte(Color(0.9, 0.9, 0.8));
+	conoIzquierdo->Move(5.0, -3.0, -50.0);
+	conoIzquierdo->RotateX(-90.0);
+
+	scene.AddSolidObject(conoIzquierdo);
+
+	//CUBOIDS
+	/*
+	Cuboid *cuboid = new Cuboid(0.6, 0.6, 0.6);
 	cuboid->SetFullMatte(Color(0.9, 0.5, 0.8));
-	cuboid->Move(1.2, -0.7, -50.0);
+	cuboid->Move(1.0, -1.2, -50.0);
 	cuboid->RotateX(-130.0);
 	cuboid->RotateY(-3.0);
 
 	scene.AddSolidObject(cuboid);
 
-	Cuboid *cuboid2 = new Cuboid(0.3, 0.3, 0.9);
+	Cuboid *cuboid2 = new Cuboid(0.4, 0.4, 0.6);
 	cuboid2->SetFullMatte(Color(0.9, 0.9, 0.8));
-	cuboid2->Move(1.9, -2.0, -50.0);
+	cuboid2->Move(1.9, 0.2, -50.0);
 	cuboid2->RotateX(-160.0);
 	cuboid2->RotateY(-3.0);
 
 	scene.AddSolidObject(cuboid2);
-
-	/*Cuboid *cuboid3 = new Cuboid(0.3, 0.3, 0.6);
-	cuboid2->SetFullMatte(Color(0.9, 0.9, 0.8));
-	cuboid2->Move(0.2, -0.9, -50.0);
-	cuboid2->RotateX(-160.0);
-	cuboid2->RotateY(-3.0);
-
-	scene.AddSolidObject(cuboid3);*/
-
-	/*Cuboid *cuboid4 = new Cuboid(0.4, 0.4, 0.6);
-	cuboid4->SetFullMatte(Color(0.9, 0.9, 0.8));
-	cuboid4->Move(2.1, -2.9, -50.0);
-	cuboid4->RotateX(-160.0);
-	cuboid4->RotateY(-3.0);
-
-	scene.AddSolidObject(cuboid4);
-	scene.AddLightSource(LightSource(Vector(-5.0, 50.0, +20.0), Color(1.0, 1.0, 1.0)));
 	*/
-
-
-
 	//SPHERES
 
-	struct sphere_info
+	/*struct sphere_info
 	{
 		Vector center;
 		double radius;
@@ -135,11 +125,11 @@ void createScene()
 		//sphere->SetMatteGlossBalance(0.95, Color(0.4, 0.5, 0.7), Color(0.8, 1.0, 0.7));
 		scene.AddSolidObject(sphere);
 	}
-
-	scene.AddLightSource(LightSource(Vector(-25.0, +30.0, +40.0), Color(0.3, 0.2, 0.1, 1.0)));
+	
+	scene.AddLightSource(LightSource(Vector(-25.0, +30.0, +40.0), Color(0.3, 0.2, 0.1, 1.0)));*/
 	//CYLENDER
 
-	Cylinder* cylinder = new Cylinder(1.5, 4.0);
+	/*Cylinder* cylinder = new Cylinder(1.5, 4.0);
 	cylinder->SetFullMatte(Color(1.0, 0.5, 0.5));
 	cylinder->Move(-4.0, 2.0, -50.0);
 	cylinder->RotateX(-160.0);
@@ -154,7 +144,7 @@ void createScene()
 	cylinder2->RotateY(5.0);
 
 	scene.AddSolidObject(cylinder2);
-
+	*/
 
 	Cylinder* cylinder3 = new Cylinder(1.5, 4.0);
 	cylinder3->SetFullMatte(Color(0.1, 0.8, 0.6));
